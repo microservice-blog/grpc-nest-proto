@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auth;
 
-servive AuthService {
+service AuthService {
     rpc Register (RegisterRequest) returns (RegisterResponse);
     rpc Login (LoginRequest) returns (LoginResponse);
     rpc Validate (ValidateRequest) returns (ValidateResponse);
@@ -14,7 +14,7 @@ message RegisterRequest {
 }
 
 message RegisterResponse {
-    int32 status = 1l
+    int32 status = 1;
     repeated string errors = 2;
 }
 
